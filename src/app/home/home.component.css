@@ -1,4 +1,49 @@
-p {
+.introduction {
     color: white;
-    font-size: 40px;
+    margin-left:80px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content:space-between
+}
+
+.greetings {
+    padding-top: 150px;
+    padding-bottom: 200px;
+    font-size: 30px;
+    font-weight: 300px;
+    display:flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+
+p{
+    margin-left: 100px;
+}
+
+button {
+    background: rgb(12, 17, 123) ;
+    border-radius: 30px;
+    font-size: 30px;
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 200px;
+    height: 60px;
+    border: none;
+}
+
+button:hover {
+    background:#5faffa;
+}
+
+button:active{
+    background-color: #0150DB;
+}
+
+.socials {
+    margin-top: 200px;
 }

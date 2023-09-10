@@ -1,5 +1,9 @@
+body {
+    font-family: serif
+}
+
 .hero {
-    height: 100vh
+    height: 100px;
 }
 
 nav {
@@ -31,9 +35,8 @@ a.nav-link {
 }
 
 a:hover {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    background-color: rgb(12, 79, 143);
+    background-color: #141EA4;
 }
 
 
