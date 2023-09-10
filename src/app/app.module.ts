@@ -8,7 +8,15 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LogoComponent } from 'src/logo';
+import { RouterModule } from '@angular/router';
 
+const routes=[
+  {path:'',component: HomeComponent},
+  {path:'home',component: HomeComponent},
+  {path:'about-me',component: AboutMeComponent},
+  {path:'contact',component: ContactComponent},
+  {path:'portfolio',component: PortfolioComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +28,8 @@ import { LogoComponent } from 'src/logo';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
