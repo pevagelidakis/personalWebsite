@@ -21,12 +21,17 @@ h1 {
 
 }
 
+span{
+    font-style: italic ;
+    color:#ff004f
+}
+
 p{
     margin-left: 100px;
 }
 
 button {
-    background: rgb(12, 17, 123) ;
+    background: #ff004f ;
     border-radius: 30px;
     font-size: 30px;
     margin-left: 200px;
@@ -37,7 +42,8 @@ button {
 }
 
 button:hover {
-    background:#5faffa;
+    background:#190773;
+    background:#0150DB;
 }
 
 button:active{

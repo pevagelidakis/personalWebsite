@@ -1,3 +1,5 @@
 body {
     background-image: url('assets/images/pixlr-nn.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

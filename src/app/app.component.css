@@ -1,5 +1,5 @@
 body {
-    font-family: serif
+    font-family: serif;
 }
 
 .hero {
@@ -36,13 +36,21 @@ a.nav-link {
 a:hover {
     font-weight: bold;
     background-color: #141EA4;
+    transition: 0.5s
+}
+
+.router{
+    min-height: 100vh;
 }
 
 
 footer {
+    /* background-color: #0B178D; */
     color: white;
     text-align: center;
     font-size: 20px;
+    width: 100%;
+    margin-top:auto;
 }
 
 .invitation {
