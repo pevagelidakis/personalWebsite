@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { LogoComponent } from 'src/logo';
+import { LogoComponent } from 'src/app/logo/logo';
 import { RouterModule } from '@angular/router';
 
 const routes=[
