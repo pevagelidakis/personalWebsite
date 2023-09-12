@@ -1,13 +1,26 @@
 .introduction {
     color: white;
-    margin-left:80px;
+    padding-left:10px;
+    margin-top: 50px;
     display: flex;
+    background-color: #161323;
     /* flex-direction: column; */
-    justify-content:space-between
+    justify-content:space-between;
+}
+
+img{
+    margin-left: 100px;
+}
+
+img {
+    /* border-radius: 900px; */
+    margin-top: 100px;
+    height: 500px
 }
 
 .greetings {
     padding-top: 150px;
+    margin-left: 400px;
     padding-bottom: 200px;
     font-size: 30px;
     font-weight: 300px;
@@ -23,7 +36,19 @@ h1 {
 
 span{
     font-style: italic ;
-    color:#ff004f
+    color:#ff004f;
+    width:auto
+}
+
+.introduce {
+    width: 400px;
+}
+
+.typing {
+    font-size: 30px;
+    margin-left: 50px;
+    font-weight: bold;
+    display:inline;
 }
 
 p{
@@ -38,6 +63,7 @@ button {
     margin-top: 20px;
     width: 200px;
     height: 60px;
+    position: static;
     border: none;
 }
 
@@ -52,7 +78,7 @@ button:active{
 
 .socials {
     margin-top: 180px;
-    margin-right:10px;
+    margin-left:10px;
     justify-content: flex;
     flex-direction: column;
 }
@@ -61,8 +87,21 @@ button:active{
     margin-top: 8px;
     width:50px;
     height:50px;
+    display: flex;
+    flex-direction: column;
 }
 
+img{
+    width: 50px;
+    height: 50px;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+
+.headshot {
+    width: 500px;
+    height:600px;
+}
 .business-app{
     background-color: white;
     border-radius: 50px;

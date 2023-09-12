@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LogoComponent } from 'src/app/logo/logo';
 import { RouterModule } from '@angular/router';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 const routes=[
   {path:'',component: HomeComponent},
@@ -29,6 +30,7 @@ const routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxTypedJsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
