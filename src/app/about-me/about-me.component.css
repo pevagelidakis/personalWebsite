@@ -15,19 +15,32 @@ section {
 
 }
 
-span {
+span,.library {
     font-style: italic;
     color:#ff004f;
     font-size: 30px;
 }
 
-.text{
-    font-size: 30px;
+#certificate{
+    width: 35px
 }
 
 .info {
     font-size: 25px;
 
+}
+
+.libraries{
+    font-size: 40px;
+    font-weight: bold;
+    color: #cacfff;
+    text-align: center;
+
+}
+
+ul{
+    list-style-type: none;
+    text-align: start;
 }
 
 a{
