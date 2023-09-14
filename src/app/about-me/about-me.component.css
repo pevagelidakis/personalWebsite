@@ -43,6 +43,11 @@ span,.library {
 
 }
 
+.hobby {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 ul{
     list-style-type: none;
     text-align: start;
