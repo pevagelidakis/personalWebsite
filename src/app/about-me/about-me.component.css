@@ -21,6 +21,11 @@ span,.library {
     font-size: 30px;
 }
 
+.tool, .lang {
+    margin-left: 10px;
+    margin-right: 10px ;
+}
+
 #certificate{
     width: 35px
 }

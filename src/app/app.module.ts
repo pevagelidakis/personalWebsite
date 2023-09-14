@@ -10,13 +10,15 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LogoComponent } from 'src/app/logo/logo';
 import { RouterModule } from '@angular/router';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { NgxExtendedPdfViewerModule,NgxExtendedPdfViewerComponent } from 'ngx-extended-pdf-viewer';
 
 const routes=[
   {path:'',component: HomeComponent},
   {path:'home',component: HomeComponent},
   {path:'about-me',component: AboutMeComponent},
   {path:'contact',component: ContactComponent},
-  {path:'portfolio',component: PortfolioComponent}
+  {path:'portfolio',component: PortfolioComponent},
+  {path:'data-science-certification-UOA.pdf',component: NgxExtendedPdfViewerComponent}
 ]
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ const routes=[
     BrowserModule,
     AppRoutingModule,
     NgxTypedJsModule,
+    NgxExtendedPdfViewerModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
