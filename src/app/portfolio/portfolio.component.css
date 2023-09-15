@@ -34,7 +34,7 @@ h4 {
 
 }
 
-.github-container {
+.data-analysis-container, .github-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
@@ -53,8 +53,7 @@ a {
     padding-top: 20px;
     width: 500px;
     flex: 0 0 calc(25% - 20px); 
-
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
     box-shadow: 5px 5px 20px black;
 };
@@ -63,6 +62,8 @@ a {
     margin:10px;
     object-fit: center;
 }
+
+
 
 .image{
     text-align: center;
@@ -77,45 +78,6 @@ hr {
     margin-left: 20px;
     border-color: #cacfff;
 }
-/* @keyframes slide{
-    0%{
-        transform: translateX(0);
-    }
-    16% {
-        translate: translateX(0);
-    }
-    21% {
-        translate: translateX(-100%);
-    }
-    33%{
-        transform:translateX(-100%);
-    }
-    38%{
-        transform:translateX(-200%);
-    }
-    50%{
-        transform:translateX(-200%);
-    }
-    55%{
-        transform:translateX(-300%);
-    }
-    66%{
-        transform:translateX(-300%);
-    }
-    70%{
-        transform:translateX(-400%);
-    }
-    83%{
-        transform:translateX(-400%);
-    }
-    88%{
-        transform:translateX(-500%);
-    }
-    100%{
-        transform:translateX(-500%);
-    }
-
-} */
 
 .project-container {
     
@@ -131,6 +93,10 @@ hr {
     color:#ff004f
 }
 
+.view-here:hover {
+    color:#cacfff
+}
+
 p {
     color: white;
     font-size: 40px;
@@ -142,6 +108,18 @@ p {
     margin-left: 20px;
     font-size: 20px;
     color: #ca3929
+}
+
+p.see-more {
+    margin-top:40px;
+    font-size: 20px;
+    margin-bottom:-10px;
+}
+
+
+.tableau{
+    background-color: #d5edff;
+    border-radius: 200px;
 }
 
 svg {
