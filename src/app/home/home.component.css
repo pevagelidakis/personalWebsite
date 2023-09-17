@@ -3,7 +3,7 @@
     padding-left:10px;
     margin-top: 50px;
     display: flex;
-    background-color: #161323;
+    background: linear-gradient(#161323,black);
     /* flex-direction: column; */
     justify-content:space-between;
 }
@@ -68,7 +68,6 @@ button {
 }
 
 button:hover {
-    background:#190773;
     background:#0150DB;
 }
 

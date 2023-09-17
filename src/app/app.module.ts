@@ -10,7 +10,11 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LogoComponent } from 'src/app/logo/logo';
 import { RouterModule } from '@angular/router';
 import { NgxTypedJsModule } from 'ngx-typed-js';
-import { NgxExtendedPdfViewerModule,NgxExtendedPdfViewerComponent } from 'ngx-extended-pdf-viewer';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';  
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { DialogComponent } from './dialog/dialog.component';
 
 const routes=[
   {path:'',component: HomeComponent},
@@ -18,7 +22,6 @@ const routes=[
   {path:'about-me',component: AboutMeComponent},
   {path:'contact',component: ContactComponent},
   {path:'portfolio',component: PortfolioComponent},
-  {path:'data-science-certification-UOA.pdf',component: NgxExtendedPdfViewerComponent}
 ]
 @NgModule({
   declarations: [
@@ -27,14 +30,18 @@ const routes=[
     AboutMeComponent,
     ContactComponent,
     PortfolioComponent,
-    LogoComponent
+    LogoComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxTypedJsModule,
-    NgxExtendedPdfViewerModule,
-    RouterModule.forRoot(routes)
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatButtonModule,
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
