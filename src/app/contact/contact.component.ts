@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators, NgForm} from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { DialogComponent } from '../dialog/dialog.component';
-import { UnaryOperatorExpr } from '@angular/compiler';
-import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatButtonModule} from '@angular/material/button';
+import {MatDialog} from '@angular/material/dialog';
 import {FormsModule} from '@angular/forms';
 
 @Component({
@@ -15,25 +11,26 @@ import {FormsModule} from '@angular/forms';
   styleUrls: ['./contact.component.css'],
   })
 export class ContactComponent {
-  formData: FormGroup= this.builder.group({
-    from_name:'',
-    to_name:'Admin',
-    email:'',
-    subject:'',
-    message:''
+  formData = new FormGroup({
+    from_name: new FormControl('',Validators.required),
+    to_name:new FormControl('Admin'),
+    email:new FormControl('',Validators.required),
+    subject:new FormControl(''),
+    message:new FormControl('',Validators.required)
   });
   constructor(private builder: FormBuilder, private dialog: MatDialog) {} 
   private key = 'HR5zsKzrFJgEPZ_yi'
   async send(){
-    emailjs.init(this.key);
-    let response = await emailjs.send("service_o9q4a7y","template_86x77ai",{
-      from_name: this.formData.value.from_name,
-      to_name: "PanosEvagelidakis",
-      email: this.formData.value.email,
-      subject: this.formData.value.subject,
-      message: this.formData.value.message
-    });
+    // emailjs.init(this.key);
+    // let response = await emailjs.send("service_o9q4a7y","template_86x77ai",{
+    //   from_name: this.formData.value.from_name,
+    //   to_name: "PanosEvagelidakis",
+    //   email: this.formData.value.email,
+    //   subject: this.formData.value.subject,
+    //   message: this.formData.value.message
+    // });
     this.openDialog()
+    console.log(JSON.stringify(this.formData))
     this.formData.reset()
   }
 

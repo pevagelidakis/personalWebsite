@@ -22,12 +22,13 @@ label {
 input, textarea{
     text-shadow: black;
     translate: -24%;
-    width:700px;
+    width:200%;
     border-radius:50px;
     background-color: #cacfff;
 }
 
 small {
+    font-size: 10px;
     color:#5ffafa;
 
 }
@@ -38,6 +39,8 @@ button {
     background-color: #ff004f;
     border-color: #ff004f;
     border-radius: 30px;
+}
 
-
+p {
+    color: white;
 }

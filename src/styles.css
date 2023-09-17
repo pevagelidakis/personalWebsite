@@ -1,7 +1,12 @@
 body {
-    background-image: url('assets/images/pixlr-nn.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%; 
+    width: 100%
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0; 
+    font-family: "New Times Roman", sans-serif; 
+    background: url('assets/images/pixlr-nn.jpg') fixed;
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat ;}
+

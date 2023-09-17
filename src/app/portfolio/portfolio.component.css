@@ -35,7 +35,7 @@ h4 {
 }
 
 .data-analysis-container, .github-container {
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
     justify-content: space-between; 
   }
@@ -123,8 +123,8 @@ p.see-more {
 }
 
 svg {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .power-bi:hover {
