@@ -1,54 +1,74 @@
 <div class="container">
     <h2 class="text-center mb-5">Contact me!</h2>
-    <div class="row" [formGroup]="formData">
+    <div class="row">
         <div class="col-md-6 offset-md-3">
-            <form [formGroup]="formData" action="javascript:void(0)" (ngSubmit)="send()">
+            <form  [formGroup]="formData" (ngSubmit)="send()">
                 <div class="form-group">
                     <label for="fullname">Full Name</label>
                     <input 
+                        appFormDirective
                         autofocus="true"
                         type="text" 
                         class="form-control"
                         id="fullname" 
                         placeholder="Full Name" 
                         formControlName="from_name"
-                        required
-                        >
+                        required>
+                    <div class="alert"
+                        *ngIf="formData.get('from_name')?.touched && formData.get('from_name')?.invalid">
+                        I would love to know your name. Would you like to provide that?
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="Email">Email</label>
                     <input 
                         type="email" 
+                        appFormDirective
                         class="form-control" 
                         id="Email" 
-                        aria-describedby="emailHelp" 
-                        placeholder="Enter email" 
                         formControlName="email"
+                        aria-describedby="emailHelp" 
+                        placeholder="Email" 
                         required>
                     <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+                    <div class="alert"
+                        *ngIf="formData.get('email')?.touched && formData.get('email')?.invalid">
+                        Please, provide me your email.
+                    </div>
+                    <div class="alert"
+                        *ngIf="formData.get('email')?.touched && (formData.value.email? isInvalidAddress(formData.value.email) : false)">
+                        Could you try again, please?<br>It seems like You have entered an invalid email address!
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="Subject">Subject</label>
                     <input 
-                        type="email" 
+                        type="text" 
                         class="form-control" 
                         id="Subject" 
                         aria-describedby="emailHelp" 
                         placeholder="Subject" 
                         formControlName="subject">
                 </div>
-                <div class="form-group">
+                <div class="form-group" id="form-text">
                     <label for="message">Message</label>
                     <textarea 
+                        onInput="this.parentNode.dataset.replicatedValue = this.value"
                         class="form-control" 
+                        appFormDirective
+                        x-model="text" 
                         formControlName="message" 
                         placeholder="I would be really glad to read your thoughts! Feel free to reach out to me!"
                         id="message"
                         required
                         >
                     </textarea>
+                    <div class="alert"
+                        *ngIf="formData.get('message')?.touched && formData.get('message')?.invalid">
+                        
+                        Please, write any thought you would like to share, but I cannot send an empty message.
+                    </div>
                 </div>
-                
                 <button type="submit" class="btn btn-primary" [disabled]="!formData.valid">Submit</button>
             </form>
         </div>

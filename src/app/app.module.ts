@@ -10,11 +10,12 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LogoComponent } from 'src/app/logo/logo';
 import { RouterModule } from '@angular/router';
 import { NgxTypedJsModule } from 'ngx-typed-js';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';  
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { DialogComponent } from './dialog/dialog.component';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatError, MatFormFieldModule } from '@angular/material/form-field';
 
 const routes=[
   {path:'',component: HomeComponent},
@@ -39,11 +40,15 @@ const routes=[
     NgxTypedJsModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule
   ],
-  providers: [],
+  exports:[MatFormFieldModule],
+  providers: [
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: [{appearance: 'outline'}, {floatLabel: 'always'}]},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

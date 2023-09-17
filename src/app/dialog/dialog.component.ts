@@ -1,7 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogConfig } from '@angular/material/dialog'
-import { ContactComponent } from '../contact/contact.component';
+import { MAT_DIALOG_DATA, MatDialogConfig, MatDialogRef } from '@angular/material/dialog'
 
 @Component({
   selector: 'app-dialog',
@@ -10,7 +8,7 @@ import { ContactComponent } from '../contact/contact.component';
 })
 
 export class DialogComponent implements OnInit{
-  constructor(@Inject(MAT_DIALOG_DATA) public data: MatDialogConfig< {name: string}>) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: {name: string}) {}
 
   ngOnInit(): void {}
     

@@ -23,8 +23,9 @@ input, textarea{
     text-shadow: black;
     translate: -24%;
     width:200%;
-    border-radius:50px;
+    border-radius:20px;
     background-color: #cacfff;
+    
 }
 
 small {
@@ -44,3 +45,48 @@ button {
 p {
     color: white;
 }
+/*  */
+#form-text {
+    /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+    display: grid;
+  }
+  #form-text::after {
+    /* Note the weird space! Needed to preventy jumpy behavior */
+    content: attr(data-replicated-value) " ";
+  
+    /* This is how textarea text behaves */
+    white-space: pre-wrap;
+  
+    /* Hidden from view, clicks, and screen readers */
+    visibility: hidden;
+  }
+  #form-text > textarea {
+    /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+    resize: none;
+  
+    /* Firefox shows scrollbar on growth, you can hide like this. */
+    overflow: hidden;
+  }
+  #form-text > textarea,
+  #form-text::after {
+    /* Identical styling required!! */
+    border: 1px solid black;
+    padding: 0.5rem;
+    font: inherit;
+
+    grid-area: 2 / 2 / 2 / 1;
+  }
+  
+  body {
+    margin: 2rem;
+    font: 1rem/1.4 system-ui, sans-serif;
+  }
+
+  .alert {
+    color:red;
+    font-size: 15px;
+    text-align:start;
+    width:150%
+  }
+
+  

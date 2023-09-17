@@ -4,6 +4,7 @@
 
 .button {
     border-radius: 20px;
+    color:white;
     background-color: #ff004f;
     border-color: #ff004f;
     width: 100%;
@@ -14,4 +15,5 @@
 
 .button:hover {
     background:#0150DB;
+    border-color: #0150DB;
 }   
