@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1000.01px){
+@media only screen and (min-width: 1468px){
     .introduction {
     color: white;
     padding-left:10px;
@@ -107,7 +107,135 @@ img{
 
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (min-width:768px) and (max-width: 1468px){
+    .introduction {
+        color: white;
+        padding-left:1rem;
+        margin-top: 5rem;
+        display: -ms-grid;
+        background: linear-gradient(#161323,black);
+        justify-content:start;
+        width:100%;
+        height: 100%
+
+    }
+
+    img{
+        margin-left: 10rem;
+    }
+
+    /* img {
+        margin-top: 100px;
+        height: 500px
+    } */
+
+    .greetings {
+        padding-top: 3rem;
+        margin-left: 2rem;
+        padding-bottom: 3rem;
+        font-size: 2rem;
+        font-weight: 5rem;
+        display:flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bolder;
+
+    }
+
+    span{
+        font-style: italic ;
+        color:#ff004f;
+        width:auto;
+        font-size: 5rem;
+    }
+
+    .introduce {
+        width: 100%;
+    }
+
+    .typing {
+        font-size: 2rem;
+        /* margin-left: 1rem; */
+        margin-left: 1rem;
+        width:100%;
+        font-weight: bold;
+        display:-ms-flexbox;
+    }
+
+    p{
+        margin-left: 1rem;
+    }
+
+    button {
+        background: #ff004f ;
+        border-radius: 3rem;
+        font-size: 2rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        width: 12rem;
+        height: 4rem;
+        position: static;
+        border: none;
+    }
+
+    button:hover {
+        background:#0150DB;
+    }
+
+    button:active{
+        background-color: #0150DB;
+    }
+
+    .socials {
+        margin-top: 20%;
+        margin-left:1rem;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social,.social.kaggle{
+        margin-top: 1rem;
+        width:3rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        height:3rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social.kaggle{
+        width:0.1rem;
+        height:0.1rem;
+        margin-left: -1rem;
+        padding-right:1rem;
+        padding-right:1rem;
+        padding-bottom:2rem;
+    }
+
+    img{
+        width: 2rem;
+        height: 3rem;
+        margin-left: -0.5rem;
+        margin-top: 1rem;
+    }
+
+    .headshot {
+        width: 100%;
+        height: 100%;
+        padding-left: 50%;
+    }
+    .business-app{
+        background-color: white;
+        border-radius: 100%;
+        border-color: black;
+    }
+
+}
+@media only screen and (max-width: 767.99px){
     .introduction {
     color: white;
     padding-left:1rem;

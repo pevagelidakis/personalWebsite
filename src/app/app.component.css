@@ -64,69 +64,83 @@
         font-size: small;
     }
 }
-
-@media only screen and (max-width:768px){body {
-    font-family: serif;
+@media only screen and (max-width:580px){
+    .hamburger{
+        display: block;
+        border: 0;
+        color:white;
+        transform: translateX(-30px); 
+        background-color: transparent;
+         font-size: 30px;
+    }
 }
-
-.hero {
-    height: 100px;
+.hamburger{
+    display: none;
 }
+@media only screen and (max-width:768px){
+    
+    body {
+        font-family: serif;
+    }
 
-nav {
-    color:white;
-    display:flex;
-    justify-content: space-between;
+    .hero {
+        height: 100px;
+    }
 
-}
+    nav {
+        color:white;
+        display:flex;
+        justify-content: space-between;
 
-.logo {
-    width:0px;
-    height:0px;
-}
+    }
 
-ul {
-    text-align: end;
-    display:flex;
-}
+    .logo {
+        width:0px;
+        height:0px;
+    }
 
-li {
-    display:flex;
-    text-align: end;
-    font-size: 1rem;
-}
+    ul {
+        text-align: end;
+        display:flex;
+    }
 
-a.nav-link {
-    color:white
-}
+    li {
+        display:flex;
+        text-align: end;
+        font-size: 1rem;
+    }
 
-a:hover {
-    font-weight: bold;
-    background-color: #141EA4;
-    transition: 0.5s
-}
+    a.nav-link {
+        color:white
+    }
 
-.router{
-    min-height: 100%;
-}
+    a:hover {
+        font-weight: bold;
+        background-color: #141EA4;
+        transition: 0.5s
+    }
+
+    .router{
+        min-height: 100%;
+    }
 
 
-footer {
-    /* background-color: #0B178D; */
-    color: white;
-    text-align: center;
-    font-size: 1rem;
-    width: 100%;
-    margin-top:auto;
-}
+    footer {
+        /* background-color: #0B178D; */
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        width: 100%;
+        margin-top:auto;
+    }
 
-.invitation {
-    font-size: 2rem;
-    font-weight: bold;
-}
+    .invitation {
+        font-size: 2rem;
+        font-weight: bold;
+    }
 
-.copyright {
-    font-style: italic;
-    font-size: 0.5rem;
-}
+    .copyright {
+        font-style: italic;
+        font-size: 0.5rem;
+    }
 }
