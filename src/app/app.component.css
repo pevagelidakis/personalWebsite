@@ -63,22 +63,79 @@
         font-style: italic;
         font-size: small;
     }
-}
-@media only screen and (max-width:580px){
     .hamburger{
-        display: block;
-        border: 0;
-        color:white;
-        transform: translateX(-30px); 
-        background-color: transparent;
-         font-size: 30px;
+        display: none;
     }
 }
-.hamburger{
-    display: none;
-}
-@media only screen and (max-width:768px){
+@media only screen and (max-width:580px){
     
+    body {
+        font-family: serif;
+    }
+
+    .hero {
+        height: 100px;
+    }
+
+    nav {
+        color:white;
+        display:flex;
+        justify-content: space-between;
+
+    }
+
+    .logo {
+        display: none;
+    }
+
+    ul {
+        text-align: end;
+        display:flex;
+    }
+
+    li {
+        display:flex;
+        text-align: end;
+        font-size: 0.5rem;
+    }
+
+    a.nav-link {
+        color:white
+    }
+
+    a:hover {
+        font-weight: bold;
+        background-color: #141EA4;
+        transition: 0.5s
+    }
+
+    .router{
+        min-height: 100%;
+    }
+
+
+    footer {
+        /* background-color: #0B178D; */
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        width: 100%;
+        margin-top:auto;
+    }
+
+    .invitation {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .copyright {
+        font-style: italic;
+        font-size: 0.5rem;
+    }
+    
+}
+
+@media only screen and (min-width:580.01px) and (max-width:768px){
     body {
         font-family: serif;
     }
